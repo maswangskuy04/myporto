@@ -25,7 +25,7 @@ function App() {
     <div className='min-h-screen transition-colors duration-500'>
       <button
         onClick={toggleTheme}
-        className="fixed top-4 right-4 z-50 p-3 rounded-full bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-white shadow transition"
+        className="fixed top-4 right-4 z-50 p-3 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-white shadow transition"
       >
         {theme === 'dark' ? '🌞' : '🌙'}
       </button>

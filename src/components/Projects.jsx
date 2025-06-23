@@ -3,6 +3,8 @@ import { FaReact, FaLaravel } from 'react-icons/fa'
 import { SiTailwindcss, SiMysql } from 'react-icons/si'
 import { motion } from 'framer-motion'
 import fotoPorto from '../assets/porto.png'
+import fotoBookingYuk from '../assets/bookingyuk.png'
+import fotoTodoApp from '../assets/todoapp.png'
 
 function Projects() {
   const [selectedProject, setSelectedProject] = useState(null)
@@ -26,17 +28,17 @@ function Projects() {
     },
     {
       title: 'To-Do App',
-      image: 'https://placehold.co/600x400?text=To-Do+App',
-      description: 'Aplikasi web Daftar Tugas yang modern dan efisien yang dibangun dengan Laravel dan Tailwind CSS. Ini memiliki antarmuka pengguna yang bersih dan responsif serta menggunakan API RESTful untuk komunikasi klien-server, dengan token otentikasi yang disimpan dengan aman di localStorage. Pengguna dapat membuat, memperbarui, dan menghapus tugas, serta mengorganisirnya berdasarkan kategori, menetapkan tenggat waktu, dan memfilter tugas berdasarkan status atau prioritas. Aplikasi ini dirancang untuk membantu pengguna mengelola aktivitas harian mereka dengan jelas dan produktif.',
+      image: fotoTodoApp,
+      description: 'Aplikasi manajemen tugas modern berbasis Laravel dan Tailwind CSS dengan antarmuka bersih dan responsif. Mendukung RESTful API dan token autentikasi via localStorage. Fitur utama: CRUD tugas, pengelompokan berdasarkan kategori, tenggat waktu, serta filter berdasarkan status dan prioritas. Dirancang untuk membantu pengguna mengelola aktivitas harian secara efisien dan terstruktur.',
       tools: ['Laravel', 'Tailwind CSS', 'MySQL'],
       demoLink: '#',
       codeLink: '#'
     },
     {
-      title: 'NabungCoy',
-      image: 'https://placehold.co/600x400?text=NabungCoy',
-      description: 'Ini adalah situs pelacak uang yang bersih dan ramah pengguna yang dibangun dengan Laravel dan Tailwind CSS. Ini membantu pengguna mencatat pendapatan dan pengeluaran mereka dengan mudah, seperti menyimpan uang. Dirancang dengan kesederhanaan dalam pikiran, situs ini menawarkan pengalaman yang lancar sambil menjaga data keuangan Anda terorganisir dan aman.',
-      tools: ['Laravel', 'Tailwind CSS', 'MySQL'],
+      title: 'BookingYuk',
+      image: fotoBookingYuk,
+      description: 'BookingYuk sistem informasi berbasis web yang dirancang untuk mempermudah proses pemesanan event. Menyediakan layanan pemesanan event yang efisien, terorganisir, dan mudah diakses, baik untuk pengguna umum maupun pihak penyelenggara/admin.',
+      tools: ['Laravel','React', 'Tailwind CSS', 'MySQL'],
       demoLink: '#',
       codeLink: '#'
     }
@@ -53,7 +55,7 @@ function Projects() {
 
   return (
     <>
-    <section id='projects' className='min-h-screen px-6 md:px-12 py-20 transition-colors duration-500 flex items-center justify-centermin-h-screen px-6 md:px-12 py-20 bg-white dark:bg-[#111111] transition-colors duration-500 flex items-center'>
+    <section id='projects' className='px-6 md:px-12 py-16 bg-white dark:bg-[#111111] transition-colors duration-500 flex items-center'>
       <div className='container mx-auto px-6'>
         <h2 className='text-3xl font-bold text-gray-600 dark:text-white text-center mb-12'>Projects</h2>
         <div className='grid gap-10 md:grid-cols-2 lg:grid-cols-3'>
@@ -71,24 +73,34 @@ function Projects() {
 
     {/* modal */}
     {selectedProject && (
-      <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>
-        <div className={`bg-white rounded-lg max-w-lg w-full p-6 relative transform transition-all duration-300 ${showModal ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-          <button onClick={closeModal} className='absolute top-2 right-3 text-gray-500 hover:text-red-600 text-xl'>&times;</button>
-          <h3 className='text-2xl font-bold text-gray-800 mb-4'>{selectedProject.title}</h3>
-          <img src={selectedProject.image} alt={selectedProject.title} className='mb-4 w-full h-48 object-cover rounded' />
-          <p className='text-gray-700 mb-6'>{selectedProject.description}</p>
-          <div className='mb-6'>
-            <div className='flex flex-wrap gap-2'>
-              {selectedProject.tools.map((tool, i) => (
-                <div key={i} className='flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700'>
-                  {toolIcons[tool]} {tool}
+      <div className="fixed inset-0 bg-black bg-opacity-50 z-50 overflow-y-auto px-4 py-8">
+        <div className="flex min-h-full items-center justify-center">
+          <div className={`bg-white rounded-lg w-full max-w-2xl mx-auto relative transform transition-all duration-300 ${showModal ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
+            <div className="max-h-[90vh] overflow-y-auto p-6">
+              <button onClick={closeModal} className="absolute top-2 right-3 text-gray-500 hover:text-red-600 text-xl">
+                &times;
+              </button>
+              <h3 className="text-2xl font-bold text-gray-800 mb-4">{selectedProject.title}</h3>
+              <img src={selectedProject.image} alt={selectedProject.title} className="mb-4 w-full h-48 object-cover rounded"/>
+              <p className="text-gray-700 mb-6">{selectedProject.description}</p>
+              <div className="mb-6">
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.tools.map((tool, i) => (
+                    <div key={i} className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700">
+                      {toolIcons[tool]} {tool}
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer" className="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition text-center">
+                  Live Demo
+                </a>
+                <a href={selectedProject.codeLink} target="_blank" rel="noopener noreferrer" className="border border-teal-600 text-teal-600 px-4 py-2 rounded hover:bg-teal-600 hover:text-white transition text-center">
+                  Github
+                </a>
+              </div>
             </div>
-          </div>
-          <div className='flex gap-4'>
-            <a href={selectedProject.demoLink} target='_blank' rel='noopener noreferrer' className='bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition'>Live Demo</a>
-            <a href={selectedProject.codeLink} target='_blank' rel='noopener noreferrer' className='border border-teal-600 text-teal-600 px-4 py-2 rounded hover:bg-teal-600 hover:text-white transition'>Github</a>
           </div>
         </div>
       </div>

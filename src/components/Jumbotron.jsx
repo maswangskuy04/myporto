@@ -38,10 +38,10 @@ function Jumbotron() {
                 delaySpeed={1500}
               />
             </span>{'  '}
-            <span className='text-gray-600 dark:text-gray-400'>I'm a fullstack web developer with a strong focus on clean frontend experiences and practical backend solutions — building responsive, maintainable, and scalable web applications.</span>
+            <span className='text-gray-600 dark:text-gray-400'>I am a full-stack developer with expertise in frontend and backend, building efficient and scalable web applications from design to deployment.</span>
           </p>
           <div className='flex justify-center md:justify-start gap-4'>
-            <a href="" className='px-6 py-3 bg-gray-900 text-white dark:bg-white dark:text-gray-900 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover:bg-gray-700 dark:hover:bg-gray-200'>Contact Me</a>
+            <a href="https://wa.me/089525577041" className='px-6 py-3 bg-gray-900 text-white dark:bg-white dark:text-gray-900 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover:bg-gray-700 dark:hover:bg-gray-200'>Contact Me</a>
             <a href="" target='_blank' rel="noopener noreferrer" className='px-6 py-3 border border-gray-900 dark:border-white text-gray-900 dark:text-white rounded-lg hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition duration-300'>Download CV</a>
           </div>
         </motion.div>
