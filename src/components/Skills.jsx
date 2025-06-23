@@ -56,8 +56,8 @@ function Skills() {
 
   return (
     <>
-    <section id='skills' className='px-6 md:px-12 py-16 bg-white dark:bg-[#111111] transition-colors duration-500 flex items-center'>
-      <div className='container mx-auto px-6'>
+    <section id='skills' className='px-6 md:px-12 py-16 bg-white dark:bg-[#111111] transition-colors duration-500'>
+      <div className='max-w-5xl mx-auto px-6'>
         <h2 className='text-3xl font-bold text-gray-600 dark:text-white text-center mb-12'>Skills & Abilities</h2>
         <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6'>
           {skills.map((skill, index) => (

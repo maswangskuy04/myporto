@@ -49,8 +49,8 @@ function Projects() {
 
   return (
     <>
-    <section id='projects' className='px-6 md:px-12 py-16 bg-white dark:bg-[#111111] transition-colors duration-500 flex items-center'>
-      <div className='container mx-auto px-6'>
+    <section id='projects' className='px-6 md:px-12 py-16 bg-white dark:bg-[#111111] transition-colors duration-500'>
+      <div className='max-w-5xl mx-auto px-6'>
         <h2 className='text-3xl font-bold text-gray-600 dark:text-white text-center mb-12'>Projects</h2>
         <div className='grid gap-10 md:grid-cols-2 lg:grid-cols-3'>
           { projects.map((project, index) => (
