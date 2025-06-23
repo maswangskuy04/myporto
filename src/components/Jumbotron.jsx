@@ -29,20 +29,19 @@ function Jumbotron() {
           <p className='text-lg md:text-xl dark:text-gray-300 text-gray-700 font-medium mb-6'>
             <span className='text-sky-600 dark:text-sky-400 font-semibold'>
               <Typewriter
-                words={['Fullstack Developer', 'Frontend Enthusiast', 'Backend Problem Solver']}
+                words={['Fullstack Web Developer', 'Tech Problem Solver']}
                 loop={true}
                 cursor
-                cursorStyle='|'
-                typeSpeed={70}
+                cursorStyle='_'
+                typeSpeed={60}
                 deleteSpeed={50}
                 delaySpeed={1500}
               />
             </span>{'  '}
-            <span className='text-gray-600 dark:text-gray-400'>I am a full-stack developer with expertise in frontend and backend, building efficient and scalable web applications from design to deployment.</span>
+            <span className='text-gray-600 dark:text-gray-400'>I specialize in crafting performant fullstack web applications with clean, maintainable code.</span>
           </p>
-          <div className='flex justify-center md:justify-start gap-4'>
-            <a href="https://wa.me/6289525577041" className='px-6 py-3 bg-gray-900 text-white dark:bg-white dark:text-gray-900 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover:bg-gray-700 dark:hover:bg-gray-200'>Contact Me</a>
-            <a href="" target='_blank' rel="noopener noreferrer" className='px-6 py-3 border border-gray-900 dark:border-white text-gray-900 dark:text-white rounded-lg hover:bg-gray-900 dark:hover:bg-white hover:text-white dark:hover:text-gray-900 transition duration-300'>Download CV</a>
+          <div className='flex justify-center md:justify-start'>
+            <a href="https://wa.me/6289525577041" className='px-6 py-3 bg-gray-900 text-white dark:bg-white dark:text-gray-900 rounded-lg shadow-md hover:shadow-lg transition duration-300 hover:bg-gray-700 dark:hover:bg-gray-200'>Let's Talk</a>
           </div>
         </motion.div>
       </div>

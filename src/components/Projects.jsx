@@ -21,26 +21,20 @@ function Projects() {
     {
       title: 'Portofolio Website',
       image: fotoPorto,
-      description: 'A personal portfolio built with React and TailwindCSS.',
+      description: 'Portofolio Reyhan Marlizal.',
       tools: ['React', 'Tailwind CSS'],
-      demoLink: '#',
-      codeLink: '#'
     },
     {
       title: 'To-Do App',
       image: fotoTodoApp,
-      description: 'Aplikasi manajemen tugas modern berbasis Laravel dan Tailwind CSS dengan antarmuka bersih dan responsif. Mendukung RESTful API dan token autentikasi via localStorage. Fitur utama: CRUD tugas, pengelompokan berdasarkan kategori, tenggat waktu, serta filter berdasarkan status dan prioritas. Dirancang untuk membantu pengguna mengelola aktivitas harian secara efisien dan terstruktur.',
+      // description: 'Aplikasi manajemen tugas modern berbasis Laravel dan Tailwind CSS dengan antarmuka bersih dan responsif. Mendukung RESTful API dan token autentikasi via localStorage. Fitur utama: CRUD tugas, pengelompokan berdasarkan kategori, tenggat waktu, serta filter berdasarkan status dan prioritas. Dirancang untuk membantu pengguna mengelola aktivitas harian secara efisien dan terstruktur.',
       tools: ['Laravel', 'Tailwind CSS', 'MySQL'],
-      demoLink: '#',
-      codeLink: '#'
     },
     {
       title: 'BookingYuk',
       image: fotoBookingYuk,
       description: 'BookingYuk sistem informasi berbasis web yang dirancang untuk mempermudah proses pemesanan event. Menyediakan layanan pemesanan event yang efisien, terorganisir, dan mudah diakses, baik untuk pengguna umum maupun pihak penyelenggara/admin.',
       tools: ['Laravel','React', 'Tailwind CSS', 'MySQL'],
-      demoLink: '#',
-      codeLink: '#'
     }
   ]
 
@@ -81,24 +75,14 @@ function Projects() {
                 &times;
               </button>
               <h3 className="text-2xl font-bold text-gray-800 mb-4">{selectedProject.title}</h3>
-              <img src={selectedProject.image} alt={selectedProject.title} className="mb-4 w-full h-48 object-cover rounded"/>
-              <p className="text-gray-700 mb-6">{selectedProject.description}</p>
-              <div className="mb-6">
-                <div className="flex flex-wrap gap-2">
-                  {selectedProject.tools.map((tool, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700">
-                      {toolIcons[tool]} {tool}
-                    </div>
-                  ))}
-                </div>
-              </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a href={selectedProject.demoLink} target="_blank" rel="noopener noreferrer" className="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 transition text-center">
-                  Live Demo
-                </a>
-                <a href={selectedProject.codeLink} target="_blank" rel="noopener noreferrer" className="border border-teal-600 text-teal-600 px-4 py-2 rounded hover:bg-teal-600 hover:text-white transition text-center">
-                  Github
-                </a>
+              <img src={selectedProject.image} alt={selectedProject.title} className="mb-6 w-full h-48 object-cover rounded"/>
+              {/* <p className="text-gray-700 mb-6">{selectedProject.description}</p> */}
+              <div className="flex flex-wrap gap-2">
+                {selectedProject.tools.map((tool, i) => (
+                  <div key={i} className="flex items-center gap-2 bg-gray-100 px-3 py-1 rounded-full text-sm text-gray-700">
+                    {toolIcons[tool]} {tool}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
