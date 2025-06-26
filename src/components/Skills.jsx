@@ -46,7 +46,7 @@ function Skills() {
               key={i}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.5, delay: i * 0.2 }}
             >
               <h3 className="text-lg font-semibold text-gray-600 dark:text-gray-300 mb-6">
@@ -57,7 +57,7 @@ function Skills() {
                   {category.items.map((skill, index) => (
                     <motion.div
                       key={index}
-                      className="flex-shrink-0 snap-start w-[220px] rounded-xl bg-gray-50 dark:bg-[#1b1b1b] border border-gray-200 dark:border-gray-800 p-6 flex flex-col items-center justify-center text-center shadow hover:shadow-lg"
+                      className="flex-shrink-0 snap-start w-[220px] rounded-xl bg-gray-50 dark:bg-[#1b1b1b] border border-gray-200 dark:border-gray-800 p-6 flex flex-col items-center justify-center text-center shadow"
                     >
                       <div className="text-5xl mb-2 text-gray-700 dark:text-white">
                         {skill.icon}
