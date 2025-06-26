@@ -42,9 +42,12 @@ function Jumbotron() {
 
         <motion.a
           href="https://wa.me/6289525577041"
+          initial={{ opacity: 0, scale: 0.60 }}
+          animate={{ opacity: 1, scale: 1 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.97 }}
-          className="inline-block px-6 py-3 bg-gradient-to-tr from-gray-700 via-gray-500 to-gray-300 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          className="inline-block px-6 py-3 bg-gradient-to-tr from-gray-700 via-gray-500 to-gray-300 text-white font-semibold rounded-xl shadow-md hover:shadow-lg"
         >
           Let's Talk
         </motion.a>
