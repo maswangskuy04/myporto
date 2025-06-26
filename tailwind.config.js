@@ -11,17 +11,22 @@ export default {
       },
       animation: {
         sweep: 'sweep 2s linear infinite',
-        shimmer: 'shimmer 5s linear infinite'
+        shimmer: 'shimmer 5s linear infinite',
+        fadeInUp: 'fadeInUp 0.6s ease-out forwards'
       },
       keyframes: {
         sweep: {
           '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' }
+          '100%': { transform: 'translateX(100%)' },
         },
         shimmer: {
           '0%': { backgroundPosition: '-200% 0' },
           '100%': { backgroundPosition: '200% 0' }
         },
+        fadeInUp: {
+          '0%': { opacity: 0, transform: 'translateY(1.5rem)' },
+          '100%': { opacity: 1, transform: 'translateY(0)' }
+        }
       },
       boxShadow: {
         'inner-lg': 'inset 0 4px 8px rgba(0, 0, 0, .3)',
