@@ -1,61 +1,53 @@
-import React from 'react'
-import fotoGue from '../assets/foto_gue.png'
 import { Typewriter } from 'react-simple-typewriter'
 import { motion } from 'framer-motion'
-import Tilt from 'react-parallax-tilt'
 
 function Jumbotron() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20 bg-white dark:bg-[#111111]">      
-      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
-        <div className="flex justify-center">
-          <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15}>
-            <motion.img
-              src={fotoGue}
-              alt="Reyhan"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8 }}
-              className="w-56 h-56 sm:w-64 sm:h-64 rounded-full border-2 border-gray-300 shadow-xl object-cover"
-            />
-          </Tilt>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-center md:text-left text-gray-900 dark:text-white"
+    <section className="min-h-screen flex items-center justify-center px-6 py-16 bg-white dark:bg-[#111111] transition-colors duration-500">      
+      <div className="max-w-4xl w-full text-center text-gray-900 dark:text-white">
+        <motion.h1
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl sm:text-5xl font-bold mb-4"
         >
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
-            Hi, I'm Reyhan Marlizal
-          </h1>
+          Hi, I'm Reyhan Marlizal
+        </motion.h1>
 
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-3 h-8">
-            <Typewriter
-              words={['Fullstack Web Developer', 'Tech Enthusiast', 'Problem Solver']}
-              loop
-              cursor
-              cursorStyle="_"
-              typeSpeed={60}
-              deleteSpeed={50}
-              delaySpeed={1200}
-            />
-          </p>
+        <motion.p
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+          className="text-lg text-gray-700 dark:text-gray-300 mb-3 h-8"
+        >
+          <Typewriter
+            words={['Fullstack Web Developer', 'Always Improving', 'Tech Enthusiast']}
+            loop
+            cursor
+            cursorStyle="_"
+            typeSpeed={60}
+            deleteSpeed={50}
+            delaySpeed={1200}
+          />
+        </motion.p>
 
-          <p className="text-gray-700 dark:text-gray-400 max-w-md leading-relaxed mb-6">
-            I create fast, responsive, and maintainable web applications using modern technologies like React, Node.js, and Laravel.
-          </p>
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          className="text-gray-700 dark:text-gray-400 max-w-xl mx-auto leading-relaxed mb-6"
+        >
+          I’m a web developer diving into fullstack projects — always learning and building with care.
+        </motion.p>
 
-          <motion.a
-            href="https://wa.me/6289525577041"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-            className="inline-block px-6 py-3 bg-gradient-to-tr from-teal-500 via-sky-500 to-indigo-500 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
-          >
-            Let's Talk
-          </motion.a>
-        </motion.div>
+        <motion.a
+          href="https://wa.me/6289525577041"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.97 }}
+          className="inline-block px-6 py-3 bg-gradient-to-tr from-gray-700 via-gray-500 to-gray-300 text-white font-semibold rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+        >
+          Let's Talk
+        </motion.a>
       </div>
     </section>
   )
