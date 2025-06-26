@@ -25,7 +25,7 @@ function Skills() {
     {
       title: 'Tools & Platforms',
       items: [
-        { icon: <Icon icon="devicon:github" />, name: 'GitHub' },
+        { icon: <Icon icon="devicon:github" className='rounded-full dark:bg-white' />, name: 'GitHub' },
         { icon: <Icon icon="devicon:mysql-wordmark" />, name: 'MySQL' },
         { icon: <Icon icon="devicon:postman" />, name: 'Postman' },
         { icon: <Icon icon="devicon:git" />, name: 'Git' },
@@ -40,7 +40,7 @@ function Skills() {
         <h2 className="text-3xl font-medium text-gray-600 dark:text-white text-center mb-12">
           Skills & Abilities
         </h2>
-        <div className="space-y-14">
+        <div className="space-y-12">
           {categories.map((category, i) => (
             <motion.div
               key={i}
@@ -49,7 +49,7 @@ function Skills() {
               viewport={{ once: false }}
               transition={{ duration: 0.5, delay: i * 0.2 }}
             >
-              <h3 className="text-lg font-semibold text-gray-600 dark:text-gray-300 mb-6">
+              <h3 className="text-lg font-medium text-gray-600 dark:text-gray-300 mb-6">
                 {category.title}
               </h3>
               <div className="overflow-x-auto overflow-y-hidden scrollbar-hide snap-x snap-mandatory py-2">
@@ -57,7 +57,7 @@ function Skills() {
                   {category.items.map((skill, index) => (
                     <motion.div
                       key={index}
-                      className="flex-shrink-0 snap-start w-[220px] rounded-xl bg-gray-50 dark:bg-[#1b1b1b] border border-gray-200 dark:border-gray-800 p-6 flex flex-col items-center justify-center text-center shadow"
+                      className="flex-shrink-0 snap-start w-[220px] rounded-xl bg-gray-50 dark:bg-[#242423] border border-gray-200 dark:border-[#333] p-6 flex flex-col items-center justify-center text-center shadow"
                     >
                       <div className="text-5xl mb-2 text-gray-700 dark:text-white">
                         {skill.icon}
