@@ -1,6 +1,5 @@
 import fotoAboutMe from '../assets/foto_aboutme.jpg'
 import { motion } from 'framer-motion'
-import { Icon } from '@iconify/react'
 import Tilt from 'react-parallax-tilt'
 
 function AboutMe() {
