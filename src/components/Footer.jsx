@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react'
 
 function Footer() {
   return (
-    <footer className="bg-[#f8f9fa] dark:bg-[#0d0d0d] text-gray-300 py-10 px-6">
+    <footer className="bg-[#f8f9fa] dark:bg-[#0d0d0d] text-gray-300 py-3 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-xl font-bold text-gray-600 dark:text-white mb-2">Reyhan Marlizal</h3>

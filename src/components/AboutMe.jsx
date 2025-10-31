@@ -22,7 +22,7 @@ function AboutMe() {
             />
           </Tilt>
           <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mt-4">Reyhan Marlizal</h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400">Fullstack Web Developer</p>
+          <p className="text-sm text-gray-600 dark:text-gray-400">Web Developer</p>
         </motion.div>
 
         <motion.div
@@ -37,7 +37,7 @@ function AboutMe() {
           </p>
 
           <p className="mb-4">
-            Since then, I’ve built fullstack applications using <strong>React, Tailwind CSS, Node.js and Laravel</strong>. I love turning ideas into smooth, scalable products — especially when they challenge me.
+            Since then, I’ve developed fullstack applications using React, Tailwind CSS, Node.js, and Laravel. I enjoy transforming ideas into fast, scalable products — especially those that push me to grow.
           </p>
 
           <p>

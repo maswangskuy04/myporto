@@ -21,7 +21,7 @@ function Jumbotron() {
           className="text-lg text-gray-700 dark:text-gray-300 mb-3 h-8"
         >
           <Typewriter
-            words={['Fullstack Web Developer', 'Always Improving', 'Tech Enthusiast']}
+            words={['Web Developer', 'Always Improving', 'Tech Enthusiast']}
             loop
             cursor
             cursorStyle="_"
