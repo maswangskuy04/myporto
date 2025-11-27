@@ -58,7 +58,7 @@ function Skills() {
               <div className="-mx-6 md:-mx-12">
                 <Marquee
                   gradient={true}
-                  gradientWidth={150}
+                  gradientWidth={80}
                   gradientColor={isDark ? '#111' : '#fff'}
                   speed={35}
                   pauseOnHover={true}
