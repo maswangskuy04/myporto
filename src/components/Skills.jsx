@@ -65,16 +65,17 @@ function Skills() {
                   direction={i % 2 === 0 ? 'left' : 'right'}
                   className="py-4 overflow-hidden bg-white dark:bg-[#111111]"
                 >
-                  {category.items.map((skill, index) => (
+                  {[...category.items, ...category.items].map((skill, index) => (
                     <motion.div
                       key={index}
                       whileHover={{ scale: 1.08 }}
                       transition={{ type: 'spring', stiffness: 300 }}
-                      className="mx-4 w-[180px] md:w-[200px] bg-transparent p-6 flex flex-col items-center justify-center text-center"
+                      className="mr-0 w-[180px] md:w-[200px] p-1 flex flex-col items-center justify-center text-center"
                     >
                       <div className="text-5xl mb-3 text-gray-700 dark:text-white">
                         {skill.icon}
                       </div>
+
                       <span className="text-sm md:text-base font-medium text-gray-800 dark:text-gray-200">
                         {skill.name}
                       </span>
