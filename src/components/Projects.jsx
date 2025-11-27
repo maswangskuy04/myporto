@@ -50,11 +50,25 @@ function Projects() {
     <>
     <section id='projects' className='min-h-screen px-6 md:px-12 py-8 bg-white dark:bg-[#111111] transition-colors duration-500'>
       <div className='max-w-6xl mx-auto relative'>
-        <h2 className='text-3xl font-medium text-gray-600 dark:text-white text-center mb-12'>Projects</h2>
+        <h2 className="text-3xl font-semibold text-gray-800 dark:text-white text-center mb-12">
+          Projects
+        </h2>
         <div className='grid gap-10 md:grid-cols-2 lg:grid-cols-3'>
           { projects.map((project, index) => (
-            <motion.div key={index} onClick={() => openModal(project)} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: .3, delay: index * .1 }} viewport={{ once: false }} whileHover={{ y: -5 }} className='cursor-pointer bg-white dark:bg-[#242423] rounded-lg overflow-hidden shadow-lg'>
-              <img src={project.image} alt={project.title}  className='w-full h-48 object-cover rounded-t-lg' />
+            <motion.div
+              key={index}
+              onClick={() => openModal(project)}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: .3, delay: index * .1 }}
+              viewport={{ once: true }}
+              className='cursor-pointer bg-white dark:bg-[#242423] rounded-lg overflow-hidden shadow-lg'
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className='w-full h-48 object-cover rounded-t-lg'
+                />
               <div className='p-6'>
                 <h3 className='text-xl font-semibold dark:text-white text-gray-800'>{project.title}</h3>
               </div>

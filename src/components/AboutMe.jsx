@@ -5,7 +5,9 @@ import Tilt from 'react-parallax-tilt'
 function AboutMe() {
   return (
     <section id="about" className="min-h-screen px-6 md:px-12 py-8 bg-white dark:bg-[#111111] transition-colors duration-500">
-      <h2 className="text-3xl font-medium text-gray-600 dark:text-white text-center mb-12">About Me</h2>
+      <h2 className="text-3xl font-semibold text-gray-800 dark:text-white text-center mb-12">
+          About Me
+        </h2>
 
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
         <motion.div
