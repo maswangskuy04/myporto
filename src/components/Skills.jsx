@@ -43,9 +43,15 @@ function Skills() {
     <section id="skills" className="min-h-screen bg-[#f8f9fa] dark:bg-[#2d2e2e] px-6 md:px-12 py-16 transition-colors duration-500">
       <div className="max-w-6xl mx-auto flex flex-col space-y-5">
         <div className='mb-8'>
-          <h2 className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100">
+          <motion.h2
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100"
+          >
             Tools & Technologies
-          </h2>
+          </motion.h2>
         </div>
 
         <div className="space-y-20">

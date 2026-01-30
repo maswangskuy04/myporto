@@ -62,9 +62,15 @@ function Projects() {
       <section id="projects" className="min-h-screen bg-[#f5f3f0] dark:bg-[#231f20] px-6 md:px-12 py-16 transition-colors duration-500">
         <div className="max-w-6xl mx-auto flex flex-col space-y-5">
           <div className='mb-6'>
-            <h2 className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100">
+            <motion.h2
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100"
+            >
               My Projects
-            </h2>
+            </motion.h2>
           </div>
 
           <ul className="divide-y divide-zinc-400 dark:divide-zinc-500">

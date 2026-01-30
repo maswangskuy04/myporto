@@ -16,9 +16,14 @@ function Jumbotron() {
             Web Developer
           </motion.p>
 
-          <h1 className="text-4xl sm:text-5xl leading-tight uppercase text-zinc-900 dark:text-zinc-100">
+          <motion.h1
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl sm:text-5xl leading-tight uppercase text-zinc-900 dark:text-zinc-100"
+          >
             Reyhan Marlizal
-          </h1>
+          </motion.h1>
 
           <motion.p
             initial={{ opacity: 0 }}

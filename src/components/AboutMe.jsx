@@ -7,9 +7,15 @@ function AboutMe() {
     <section id="about" className="min-h-screen bg-[#f5f3f0] dark:bg-[#231f20] px-6 md:px-12 py-16 transition-colors duration-500">
       <div className="mx-auto max-w-6xl flex flex-col space-y-5">
         <header className="mb-12">
-          <h2 className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100">
+          <motion.h2
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100"
+          >
             About Me
-          </h2>
+          </motion.h2>
         </header>
 
         <div className="grid gap-12 md:grid-cols-[220px_1fr] md:gap-16 items-start">
