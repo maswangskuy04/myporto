@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react'
-import { FaArrowUp } from 'react-icons/fa'
+import { Icon } from '@iconify/react'
+import { AnimatePresence, motion } from 'framer-motion'
 
 function ScrollToTop() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const toggleVisible = () => {
+    const onScroll = () => {
       setVisible(window.scrollY > 300)
     }
 
-    window.addEventListener('scroll', toggleVisible)
-    return () => window.removeEventListener('scroll', toggleVisible)
+    window.addEventListener('scroll', onScroll)
+    return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
   const scrollToTop = () => {
@@ -18,11 +19,24 @@ function ScrollToTop() {
   }
 
   return (
-    visible && (
-      <button onClick={scrollToTop} className="fixed bottom-6 right-6 z-50 p-3 bg-sky-600 text-white rounded-full shadow-lg hover:bg-sky-700 transition" aria-label="Scroll to top">
-        <FaArrowUp />
-      </button>
-    )
+    <AnimatePresence>
+      {visible && (
+        <motion.button
+          key="scroll-top"
+          onClick={scrollToTop}
+          initial={{ opacity: 0, y: 16, scale: 0.9 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 16, scale: 0.9 }}
+          transition={{ duration: 0.25, ease: 'easeOut' }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          aria-label="Scroll to top"
+          className="fixed bottom-6 right-6 z-50 flex items-center justify-center h-11 w-11 rounded-full bg-zinc-800 text-zinc-100 dark:bg-zinc-200 dark:text-zinc-800 shadow-lg backdrop-blur"
+        >
+          <Icon icon="line-md:chevron-small-up" className="text-xl" />
+        </motion.button>
+      )}
+    </AnimatePresence>
   )
 }
 

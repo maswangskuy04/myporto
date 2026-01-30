@@ -1,51 +1,80 @@
-import fotoAboutMe from '../assets/foto_aboutme.jpg'
+import fotoAboutMe from '../assets/foto_aboutme.png'
 import { motion } from 'framer-motion'
-import Tilt from 'react-parallax-tilt'
+import { Icon } from '@iconify/react'
 
 function AboutMe() {
   return (
-    <section id="about" className="min-h-screen px-6 md:px-12 py-8 bg-white dark:bg-[#111111] transition-colors duration-500">
-      <h2 className="text-3xl font-semibold text-gray-800 dark:text-white text-center mb-12">
-          About Me
-        </h2>
+    <section id="about" className="min-h-screen bg-[#f5f3f0] dark:bg-[#231f20] px-6 md:px-12 py-16 transition-colors duration-500">
+      <div className="mx-auto max-w-6xl flex flex-col space-y-5">
+        <header className="mb-12">
+          <h2 className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100">
+            About Me
+          </h2>
+        </header>
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16">
-        <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className='flex flex-col items-center justify-center'
-        >
-          <Tilt tiltMaxAngleX={15} tiltMaxAngleY={15} glareEnable={true} glareBorderRadius="5%" scale={1.05} glareMaxOpacity={0.2}>
+        <div className="grid gap-12 md:grid-cols-[220px_1fr] md:gap-16 items-start">
+          <motion.figure
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mx-auto md:mx-0 w-fit text-center md:text-left"
+          >
             <img
               src={fotoAboutMe}
               alt="Portrait of Reyhan Marlizal"
-              className="rounded-2xl w-40 h-40 md:w-56 md:h-56 object-cover border-4 border-white dark:border-[#1a1a1a] shadow-md"
+              className="h-64 w-48 md:h-64 md:w-48 object-cover rounded grayscale-0 dark:grayscale"
             />
-          </Tilt>
-          <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mt-4">Reyhan Marlizal</h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400">Web Developer</p>
-        </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.8 }}
-          className="p-8 text-gray-700 dark:text-gray-300 text-sm leading-relaxed text-center"
-        >
-          <p className="mb-4">
-            My journey in web development started at <strong>Bina Sarana Informatika University</strong>, where I first discovered the magic of building websites with HTML, CSS, PHP, and JavaScript. I quickly fell in love with the craft — experimenting, building, failing, learning.
-          </p>
+            <figcaption className="mt-4 pt-3 border-t border-zinc-400 dark:border-zinc-400 flex items-center justify-center md:justify-start gap-4">
+              <a
+                href="https://www.linkedin.com/in/USERNAME"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="LinkedIn"
+                className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition"
+              >
+                <Icon icon="streamline-logos:linkedin-logo-block" className="text-lg grayscale" />
+              </a>
 
-          <p className="mb-4">
-            Since then, I’ve developed fullstack applications using React, Tailwind CSS, Node.js, and Laravel. I enjoy transforming ideas into fast, scalable products — especially those that push me to grow.
-          </p>
+              <a
+                href="mailto:email@domain.com"
+                aria-label="Email"
+                className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition"
+              >
+                <Icon icon="streamline-logos:google-mail-logo-solid" className="text-lg" />
+              </a>
 
-          <p>
-            What’s next? I'm constantly learning, growing, and leveling up. Whether it's a solo project or part of a great team, I’m ready to build something impactful.
-          </p>
-        </motion.div>
+              <a
+                href="https://instagram.com/wangskuy"
+                aria-label="Instagram"
+                className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition"
+              >
+                <Icon icon="streamline-logos:instagram-logo-2-block" className="text-lg" />
+              </a>
+            </figcaption>
+          </motion.figure>
+
+          <motion.article
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.05 }}
+            className="space-y-6"
+          >
+            <p className="max-w-3xl text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+              A Bachelor’s degree in Information Technology provides a strong foundation in backend development and data management, with practical experience in building RESTful APIs, implementing authentication flows, and working with relational databases using Node.js, PHP, and MySQL.
+            </p>
+
+            <p className="max-w-3xl text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+              This background is complemented by a vocational web programming training program at PPKD Jakarta Pusat, focused on modern web application development, including PHP frameworks, responsive design principles, and hands-on exposure to the complete frontend–backend workflow.
+            </p>
+
+            <p className="max-w-3xl text-base leading-relaxed text-zinc-700 dark:text-zinc-300">
+              The overall development approach emphasizes clean architecture, structured data flow, and long-term maintainability, with a strong interest in building real-world applications that prioritize performance, security, and production-ready quality.
+            </p>
+          </motion.article>
+        </div>
       </div>
     </section>
   )

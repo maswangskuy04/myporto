@@ -1,6 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Macondo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Macondo&family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Bungee&family=Macondo&family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Bungee&family=Macondo&family=Permanent+Marker&family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Bungee&family=Macondo&family=Permanent+Marker&family=Rubik+Distressed&family=Share+Tech&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6,
+li,
+label,
+dt,
+figcaption,
+summary,
+blockquote strong {
+  font-family: 'Bungee', cursive;
+  letter-spacing: 0.04em;
+}
+
+p,
+span,
+small,
+dd,
+blockquote,
+figcaption span,
+address,
+time,
+mark {
+  font-family: 'Averia Gruesa Libre', cursive;
+  letter-spacing: 0.02em;
+}
+
+input,
+textarea,
+select,
+button,
+option {
+  font-family: 'Averia Gruesa Libre', cursive;
+}
+
+a,
+nav,
+menu,
+menuitem {
+  font-family: 'Bungee', cursive;
+  letter-spacing: 0.06em;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: 'Averia Gruesa Libre', monospace;
+  font-size: 0.9em;
+}
+
+.cust-image-project {
+  width: 128px;
+  height: 80px;
+  object-fit: cover;
+  filter: contrast(1.2) brightness(0.85);
+  background: #e5e5e5;
+  outline: 2px solid rgba(0,0,0,0.45);
+  outline-offset: -1px;
+}
+
+.dark .cust-image-project {
+  background: #111;
+  filter: grayscale(100%) brightness(0.85);
+  outline-color: rgba(255,255,255,0.4);
+}
 
 .scrollbar-hide {
   -ms-overflow-style: none;

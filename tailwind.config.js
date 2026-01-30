@@ -9,30 +9,12 @@ export default {
       rotate: {
         'y-180': '180deg',
       },
-      animation: {
-        sweep: 'sweep 2s linear infinite',
-        shimmer: 'shimmer 5s linear infinite',
-        fadeInUp: 'fadeInUp 0.6s ease-out forwards'
-      },
-      keyframes: {
-        sweep: {
-          '0%': { transform: 'translateX(-100%)' },
-          '100%': { transform: 'translateX(100%)' },
-        },
-        shimmer: {
-          '0%': { backgroundPosition: '-200% 0' },
-          '100%': { backgroundPosition: '200% 0' }
-        },
-        fadeInUp: {
-          '0%': { opacity: 0, transform: 'translateY(1.5rem)' },
-          '100%': { opacity: 1, transform: 'translateY(0)' }
-        }
-      },
-      boxShadow: {
-        'inner-lg': 'inset 0 4px 8px rgba(0, 0, 0, .2)',
-        'inner-soft': 'inset 2px 2px 4px rgba(0, 0, 0, .2)'
-      }
     },
+    fontFamily: {
+      macondo: ['Macondo', 'cursive'],
+      averia: ['Averia Gruesa Libre', 'cursive'],
+      sharetech: ['Share Tech', 'cursive']
+    }
   },
   darkMode: 'class',
   plugins: [],

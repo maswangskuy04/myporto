@@ -1,89 +1,80 @@
 import { Icon } from '@iconify/react'
 import { motion } from 'framer-motion'
-import Marquee from 'react-fast-marquee'
 
 function Skills() {
-  const categories = [
+  const skills = [
     {
+      title: 'Frontend',
       items: [
-        { icon: <Icon icon="devicon:html5" />, name: 'HTML5' },
-        { icon: <Icon icon="devicon:css3" />, name: 'CSS3' },
-        { icon: <Icon icon="devicon:javascript" />, name: 'Javascript' },
-        { icon: <Icon icon="devicon:php" />, name: 'PHP' },
-        { icon: <Icon icon="devicon:cplusplus" />, name: 'C++' },
+        { name: 'HTML5', icon: 'skill-icons:html' },
+        { name: 'CSS3', icon: 'skill-icons:css' },
+        { name: 'JavaScript', icon: 'skill-icons:javascript' },
+        { name: 'React', icon: 'skill-icons:react-dark' },
+        { name: 'Tailwind CSS', icon: 'skill-icons:tailwindcss-dark' },
+        { name: 'Bootstrap', icon: 'skill-icons:bootstrap' },
+        { name: 'jQuery', icon: 'skill-icons:jquery' }
       ],
     },
     {
+      title: 'Backend',
       items: [
-        { icon: <Icon icon="devicon:nodejs-wordmark" />, name: 'Node.js (Runtime)' },
-        { icon: <Icon icon="devicon:express" />, name: 'Express.js' },
-        { icon: <Icon icon="devicon:react" />, name: 'ReactJS' },
-        { icon: <Icon icon="devicon:jquery-wordmark" />, name: 'jQuery' },
-        { icon: <Icon icon="devicon:tailwindcss" />, name: 'Tailwind CSS' },
-        { icon: <Icon icon="devicon:laravel" />, name: 'Laravel' },
-        { icon: <Icon icon="devicon-plain:codeigniter" color="#EE4323" />, name: 'CodeIgniter' },
-        { icon: <Icon icon="devicon:bootstrap" />, name: 'Bootstrap' },
+        { name: 'PHP', icon: 'skill-icons:php-dark' },
+        { name: 'Node.js', icon: 'skill-icons:nodejs-dark' },
+        { name: 'Laravel', icon: 'skill-icons:laravel-dark' },
+        { name: 'Codeigniter 3', icon: 'devicon-plain:codeigniter' },
+        { name: 'MySQL', icon: 'skill-icons:mysql-dark' },
+        { name: 'Express.js', icon: 'skill-icons:expressjs-dark' }
       ],
     },
     {
+      title: 'Tools',
       items: [
-        { icon: <Icon icon="devicon:github" className="rounded-full dark:bg-white" />, name: 'GitHub' },
-        { icon: <Icon icon="devicon:mysql-wordmark" />, name: 'MySQL' },
-        { icon: <Icon icon="devicon:postman" />, name: 'Postman' },
-        { icon: <Icon icon="devicon:git" />, name: 'Git' },
-        { icon: <Icon icon="devicon:npm-wordmark" />, name: 'Npm' },
-        { icon: <Icon icon="devicon:vscode" />, name: 'Visual Studio Code' },
+        { name: 'Git', icon: 'skill-icons:git' },
+        { name: 'GitHub', icon: 'skill-icons:github-dark' },
+        { name: 'Postman', icon: 'skill-icons:postman' },
+        { name: 'VS Code', icon: 'skill-icons:vscode-dark' },
+        { name: 'Docker', icon: 'skill-icons:docker' },
+        { name: 'Redis', icon: 'skill-icons:redis-dark' }
       ],
     },
   ]
 
-  const isDark = document.documentElement.classList.contains("dark")
-
   return (
-    <section id="skills" className="min-h-screen px-6 md:px-12 py-8 bg-white dark:bg-[#111111] transition-colors duration-500">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-semibold text-gray-800 dark:text-white text-center mb-12">
-          Skills & Abilities
-        </h2>
+    <section id="skills" className="min-h-screen bg-[#f8f9fa] dark:bg-[#2d2e2e] px-6 md:px-12 py-16 transition-colors duration-500">
+      <div className="max-w-6xl mx-auto flex flex-col space-y-5">
+        <div className='mb-8'>
+          <h2 className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100">
+            Tools & Technologies
+          </h2>
+        </div>
 
-        <div className="space-y-16">
-          {categories.map((category, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 40 }}
+        <div className="space-y-20">
+          {skills.map((group, i) => (
+            <motion.section
+              key={group.title}
+              initial={{ opacity: 0, y: 32 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.2 }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <div className="-mx-6 md:-mx-12">
-                <Marquee
-                  gradient={true}
-                  gradientWidth={80}
-                  gradientColor={isDark ? '#111' : '#fff'}
-                  speed={35}
-                  pauseOnHover={true}
-                  direction={i % 2 === 0 ? 'left' : 'right'}
-                  className="py-4 overflow-hidden bg-white dark:bg-[#111111]"
-                >
-                  {[...category.items, ...category.items].map((skill, index) => (
-                    <motion.div
-                      key={index}
-                      whileHover={{ scale: 1.08 }}
-                      transition={{ type: 'spring', stiffness: 300 }}
-                      className="mr-0 w-[180px] md:w-[200px] p-1 flex flex-col items-center justify-center text-center"
-                    >
-                      <div className="text-5xl mb-3 text-gray-700 dark:text-white">
-                        {skill.icon}
-                      </div>
+              <h3 className="mb-6 text-xs uppercase text-zinc-600 dark:text-zinc-300">
+                {group.title}
+              </h3>
 
-                      <span className="text-sm md:text-base font-medium text-gray-800 dark:text-gray-200">
-                        {skill.name}
-                      </span>
-                    </motion.div>
-                  ))}
-                </Marquee>
+              <div className="flex flex-wrap gap-x-10 gap-y-6">
+                {group.items.map((item) => (
+                  <div key={item.name} className="group flex items-center gap-3">
+                    <Icon
+                      icon={item.icon}
+                      className="text-xl text-zinc-700 dark:text-zinc-300 opacity-80 group-hover:opacity-100 grayscale-0 dark:grayscale transition"
+                    />
+                    <span className="text-sm text-zinc-800 dark:text-zinc-100 tracking-wide">
+                      {item.name}
+                    </span>
+                  </div>
+                ))}
               </div>
-            </motion.div>
+            </motion.section>
           ))}
         </div>
       </div>
