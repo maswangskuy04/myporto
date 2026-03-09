@@ -36,7 +36,7 @@ function AboutMe() {
             transition={{ duration: 0.7 }}
             className="hidden md:flex justify-start"
           >
-            <div className="relative w-52 h-[380px] overflow-hidden rounded-xl">
+            <div className="relative w-65 h-[380px] overflow-hidden rounded-xl">
               <img
                 src={fotoAboutMe}
                 alt="Portrait"
