@@ -14,7 +14,8 @@ function Skills() {
         { name: "React", icon: "skill-icons:react-dark" },
         { name: "Tailwind CSS", icon: "skill-icons:tailwindcss-dark" },
         { name: "Bootstrap", icon: "skill-icons:bootstrap" },
-        { name: "jQuery", icon: "skill-icons:jquery" }
+        { name: "jQuery", icon: "skill-icons:jquery" },
+        { name: "Sass", icon: "skill-icons:sass" }
       ],
     },
     {
@@ -58,7 +59,7 @@ function Skills() {
             transition={{ duration: 0.8 }}
             className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100"
           >
-            Tools & Technologies
+            Tech Stack
           </motion.h2>
         </header>
 

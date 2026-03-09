@@ -6,6 +6,7 @@ import AboutMe from './components/AboutMe'
 import ScrollToTop from './components/ScrollToTop'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import Experience from './components/Experience'
 
 function App() {
   const [theme, setTheme] = useState('light')
@@ -25,9 +26,10 @@ function App() {
   }
 
   const navLinks = [
-    { id: 'about', label: 'About Me' },
-    { id: 'skills', label: 'Tools & Technologies' },
-    { id: 'projects', label: 'My Projects' },
+    { id: 'profile', label: 'Profile' },
+    { id: 'skills', label: 'Tech Stack' },
+    { id: 'experience', label: 'Experience' },
+    { id: 'projects', label: 'My Projects' }
   ]
 
   return (
@@ -39,6 +41,7 @@ function App() {
         <Jumbotron />
         <AboutMe />
         <Skills />
+        <Experience />
         <Projects />
       </main>
 

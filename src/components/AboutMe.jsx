@@ -14,12 +14,10 @@ function AboutMe() {
   ]
 
   return (
-    <section id="about" className="relative min-h-screen bg-[#f8f9fa] dark:bg-[#2d2e2e] px-6 md:px-12 py-16 transition-colors duration-500">
-      {/* grid background */}
+    <section id="profile" className="relative min-h-screen bg-[#f8f9fa] dark:bg-[#2d2e2e] px-6 md:px-12 py-16 transition-colors duration-500">
       <div className="absolute inset-0 opacity-[0.04] dark:opacity-[0.06] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto space-y-12">
-        {/* heading */}
         <motion.h2
           initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -27,14 +25,13 @@ function AboutMe() {
             transition={{ duration: 0.8 }}
             className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100"
         >
-          About Me
+          Profile
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-14 items-start">
-          {/* photo */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.85, rotate: '-10deg' }}
-            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="hidden md:flex justify-start"
@@ -59,7 +56,6 @@ function AboutMe() {
             </div>
           </motion.div>
 
-          {/* content */}
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +78,6 @@ function AboutMe() {
               </p>
             </div>
 
-            {/* tech stack */}
             <div className="space-y-3">
               <p className="text-xs uppercase tracking-widest text-zinc-500">
                 Tech Stack
@@ -100,7 +95,6 @@ function AboutMe() {
               </div>
             </div>
 
-            {/* social */}
             <div className="flex gap-6 pt-2 text-zinc-600 dark:text-zinc-400 text-xl">
               <a href="#" className="hover:text-zinc-900 dark:hover:text-white">
                 <Icon icon="mdi:github" />
