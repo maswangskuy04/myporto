@@ -96,13 +96,13 @@ function AboutMe() {
             </div>
 
             <div className="flex gap-6 pt-2 text-zinc-600 dark:text-zinc-400 text-xl">
-              <a href="#" className="hover:text-zinc-900 dark:hover:text-white">
+              <a href="https://github.com/maswangskuy04" className="hover:text-zinc-900 dark:hover:text-white">
                 <Icon icon="mdi:github" />
               </a>
-              <a href="#" className="hover:text-zinc-900 dark:hover:text-white">
+              <a href="https://www.linkedin.com/in/reyhan-marlizal" className="hover:text-zinc-900 dark:hover:text-white">
                 <Icon icon="mdi:linkedin" />
               </a>
-              <a href="#" className="hover:text-zinc-900 dark:hover:text-white">
+              <a href="mailto:reyhanmarlizal@gmail.com" className="hover:text-zinc-900 dark:hover:text-white">
                 <Icon icon="mdi:email-outline" />
               </a>
             </div>
