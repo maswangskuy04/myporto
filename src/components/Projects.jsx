@@ -6,6 +6,7 @@ import fotoBookingYuk from '../assets/bookingyuk.png'
 import fotoTodoApp from '../assets/todoapp.png'
 import fotoAdaGue from '../assets/adague.png'
 import converteryt from '../assets/converteryt.png'
+import rebahan21 from '../assets/rebahan21.png'
 import ProjectDescription from './common/ProjectDescription'
 
 function Projects() {
@@ -22,6 +23,7 @@ function Projects() {
     'JWT': 'devicon:jwt',
     'TypeScript': 'skill-icons:typescript',
     'Redis': 'skill-icons:redis-dark',
+    'Sass': 'skill-icons:sass'
   }
 
   const projects = [
@@ -55,11 +57,19 @@ function Projects() {
       description: 'A YouTube to MP3 conversion platform with real-time progress updates, WebSocket communication, and a scalable backend designed to handle asynchronous processing efficiently.',
       tools: ['React', 'TypeScript', 'Node.js', 'Express.js', 'Socket.IO', 'Tailwind CSS', 'Redis'],
     },
+    {
+      title: 'Rebahan21',
+      image: rebahan21,
+      description: 'A full-stack movie discovery application built with React and Node.js. Implements JWT-based authentication, protected routes, a personalized favorites system, and relational data management with MySQL. The frontend uses modular SCSS architecture with skeleton loading states and lazy loading for improved performance and user experience.',
+      tools: ['React', 'Sass', 'Node.js', 'Express.js', 'JWT', 'MySQL']
+    }
   ]
 
   return (
     <>
-      <section id="projects" className="min-h-screen bg-[#f5f3f0] dark:bg-[#231f20] px-6 md:px-12 py-16 transition-colors duration-500">
+      <section id="projects" className="relative min-h-screen bg-[#f8f9fa] dark:bg-[#2d2e2e] px-6 md:px-12 py-16 transition-colors duration-500">
+        <div className="absolute inset-0 opacity-[0.04] dark:opacity-[0.06] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
+
         <div className="max-w-6xl mx-auto flex flex-col space-y-5">
           <div className='mb-6'>
             <motion.h2
@@ -89,7 +99,7 @@ function Projects() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full aspect-[16/9] object-cover grayscale contrast-125"
+                      className="w-full aspect-[16/9] object-cover dark:grayscale"
                     />
 
                     <div>

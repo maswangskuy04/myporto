@@ -56,7 +56,7 @@ export default function Navbar({ links, theme, toggleTheme }) {
         </nav>
       </header>
 
-      <header className={`md:hidden fixed top-0 left-0 right-0 z-50 h-14 flex items-center justify-between px-4 ${scrolled ? 'bg-white/50 dark:bg-black/80 backdrop-blur transition-all duration-300' : 'bg-transparent'}`}>
+      <header className={`md:hidden fixed top-0 left-0 right-0 z-50 h-14 flex items-center justify-between px-4 ${scrolled ? 'bg-white/30 dark:bg-black/30 backdrop-blur transition-all duration-300' : 'bg-transparent'}`}>
         <span className="text-sm font-bold text-zinc-600 dark:text-zinc-200">RM</span>
 
         <button onClick={() => setOpen(!open)}>

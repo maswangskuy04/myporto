@@ -65,7 +65,7 @@ samp {
   width: 128px;
   height: 80px;
   object-fit: cover;
-  filter: contrast(1.2) brightness(0.85);
+  filter: brightness(0.85);
   background: #e5e5e5;
   outline: 2px solid rgba(0,0,0,0.45);
   outline-offset: -1px;
@@ -84,4 +84,38 @@ samp {
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #111 0%, #555 50%, #111 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s linear infinite;
+}
+
+.dark .gradient-text {
+  background: linear-gradient(90deg, #f4f4f4 0%, #aaa 50%, #f4f4f4 100%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 6s linear infinite;
+}
+
+@keyframes gradientShift {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
+
+.keyword {
+  font-weight: 600;
+  border-bottom: 1px solid currentColor;
+}
+
+.writing-mode-vertical {
+  writing-mode: vertical-rl;
 }

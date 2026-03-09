@@ -4,45 +4,53 @@ import { motion } from 'framer-motion'
 function Skills() {
   const skills = [
     {
-      title: 'Frontend',
+      title: "Frontend",
+      description:
+        "Technologies used to build responsive and interactive user interfaces, focusing on performance, accessibility, and clean component structure.",
       items: [
-        { name: 'HTML5', icon: 'skill-icons:html' },
-        { name: 'CSS3', icon: 'skill-icons:css' },
-        { name: 'JavaScript', icon: 'skill-icons:javascript' },
-        { name: 'React', icon: 'skill-icons:react-dark' },
-        { name: 'Tailwind CSS', icon: 'skill-icons:tailwindcss-dark' },
-        { name: 'Bootstrap', icon: 'skill-icons:bootstrap' },
-        { name: 'jQuery', icon: 'skill-icons:jquery' }
+        { name: "HTML5", icon: "skill-icons:html" },
+        { name: "CSS3", icon: "skill-icons:css" },
+        { name: "JavaScript", icon: "skill-icons:javascript" },
+        { name: "React", icon: "skill-icons:react-dark" },
+        { name: "Tailwind CSS", icon: "skill-icons:tailwindcss-dark" },
+        { name: "Bootstrap", icon: "skill-icons:bootstrap" },
+        { name: "jQuery", icon: "skill-icons:jquery" }
       ],
     },
     {
-      title: 'Backend',
+      title: "Backend",
+      description:
+        "Used for building server-side logic, REST APIs, authentication systems, and managing application architecture and database interactions.",
       items: [
-        { name: 'PHP', icon: 'skill-icons:php-dark' },
-        { name: 'Node.js', icon: 'skill-icons:nodejs-dark' },
-        { name: 'Laravel', icon: 'skill-icons:laravel-dark' },
-        { name: 'Codeigniter 3', icon: 'devicon-plain:codeigniter' },
-        { name: 'MySQL', icon: 'skill-icons:mysql-dark' },
-        { name: 'Express.js', icon: 'skill-icons:expressjs-dark' }
+        { name: "PHP", icon: "skill-icons:php-dark" },
+        { name: "Node.js", icon: "skill-icons:nodejs-dark" },
+        { name: "Laravel", icon: "skill-icons:laravel-dark" },
+        { name: "Codeigniter 3", icon: "devicon-plain:codeigniter" },
+        { name: "MySQL", icon: "skill-icons:mysql-dark" },
+        { name: "Express.js", icon: "skill-icons:expressjs-dark" }
       ],
     },
     {
-      title: 'Tools',
+      title: "Tools",
+      description:
+        "Development tools used for version control, API testing, containerization, and improving development workflow and collaboration.",
       items: [
-        { name: 'Git', icon: 'skill-icons:git' },
-        { name: 'GitHub', icon: 'skill-icons:github-dark' },
-        { name: 'Postman', icon: 'skill-icons:postman' },
-        { name: 'VS Code', icon: 'skill-icons:vscode-dark' },
-        { name: 'Docker', icon: 'skill-icons:docker' },
-        { name: 'Redis', icon: 'skill-icons:redis-dark' }
+        { name: "Git", icon: "skill-icons:git" },
+        { name: "GitHub", icon: "skill-icons:github-dark" },
+        { name: "Postman", icon: "skill-icons:postman" },
+        { name: "VS Code", icon: "skill-icons:vscode-dark" },
+        { name: "Docker", icon: "skill-icons:docker" },
+        { name: "Redis", icon: "skill-icons:redis-dark" }
       ],
     },
   ]
 
   return (
-    <section id="skills" className="min-h-screen bg-[#f8f9fa] dark:bg-[#2d2e2e] px-6 md:px-12 py-16 transition-colors duration-500">
+    <section id="skills" className="relative min-h-screen bg-[#f8f9fa] dark:bg-[#2d2e2e] px-6 md:px-12 py-16 transition-colors duration-500">
+      <div className="absolute inset-0 opacity-[0.04] dark:opacity-[0.06] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
+
       <div className="max-w-6xl mx-auto flex flex-col space-y-5">
-        <div className='mb-8'>
+        <header className='mb-8'>
           <motion.h2
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -52,9 +60,9 @@ function Skills() {
           >
             Tools & Technologies
           </motion.h2>
-        </div>
+        </header>
 
-        <div className="space-y-20">
+        <div className="space-y-16">
           {skills.map((group, i) => (
             <motion.section
               key={group.title}
@@ -63,9 +71,13 @@ function Skills() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
-              <h3 className="mb-6 text-xs uppercase text-zinc-600 dark:text-zinc-300">
+              <h3 className="mb-2 text-xs uppercase text-zinc-600 dark:text-zinc-300">
                 {group.title}
               </h3>
+
+              <p className='mb-6 max-w-xl text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed'>
+                {group.description}
+              </p>
 
               <div className="flex flex-wrap gap-x-10 gap-y-6">
                 {group.items.map((item) => (
