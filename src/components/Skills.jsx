@@ -53,8 +53,8 @@ function Skills() {
       <div className="max-w-6xl mx-auto flex flex-col space-y-5">
         <header className='mb-8'>
           <motion.h2
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.85 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100"
@@ -67,8 +67,8 @@ function Skills() {
           {skills.map((group, i) => (
             <motion.section
               key={group.title}
-              initial={{ opacity: 0, y: 32 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -32 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >

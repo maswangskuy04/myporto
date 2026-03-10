@@ -19,8 +19,8 @@ function AboutMe() {
 
       <div className="max-w-6xl mx-auto space-y-12">
         <motion.h2
-          initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.85 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100"
@@ -30,8 +30,8 @@ function AboutMe() {
 
         <div className="grid md:grid-cols-3 gap-14 items-start">
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -25 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
             className="hidden md:flex justify-start"
@@ -57,8 +57,8 @@ function AboutMe() {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: 25 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="md:col-span-2 space-y-8"
@@ -79,7 +79,7 @@ function AboutMe() {
             </div>
 
             <div className="space-y-3">
-              <p className="text-xs uppercase tracking-widest text-zinc-500">
+              <p className="text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
                 Tech Stack
               </p>
 

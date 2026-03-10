@@ -33,18 +33,27 @@ function Experience() {
   return (
     <section id="experience" className="relative min-h-screen bg-[#f8f9fa] dark:bg-[#2d2e2e] px-6 md:px-12 py-16 transition-colors duration-500">
       <div className="absolute inset-0 opacity-[0.04] dark:opacity-[0.06] bg-[linear-gradient(to_right,#000_1px,transparent_1px),linear-gradient(to_bottom,#000_1px,transparent_1px)] bg-[size:40px_40px]" />
-      <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl mb-14 text-zinc-900 dark:text-white">
-          Experience
-        </h2>
+
+      <div className="max-w-6xl mx-auto flex flex-col space-y-5">
+        <header className="mb-8">
+          <motion.h2
+            initial={{ opacity: 0, scale: 0.85 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100"
+          >
+            Experience
+          </motion.h2>
+        </header>
 
         <div className="space-y-16">
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, x: -32 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="grid md:grid-cols-[200px_1fr] gap-6"
             >

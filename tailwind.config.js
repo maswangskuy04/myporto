@@ -13,7 +13,8 @@ export default {
     fontFamily: {
       macondo: ['Macondo', 'cursive'],
       averia: ['Averia Gruesa Libre', 'cursive'],
-      sharetech: ['Share Tech', 'cursive']
+      sharetech: ['Share Tech', 'cursive'],
+      bungee: ['Bungee', 'cursive']
     }
   },
   darkMode: 'class',

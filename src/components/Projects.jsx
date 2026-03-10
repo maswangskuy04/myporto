@@ -73,8 +73,8 @@ function Projects() {
         <div className="max-w-6xl mx-auto flex flex-col space-y-5">
           <div className='mb-6'>
             <motion.h2
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.85 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="text-3xl md:text-4xl text-center md:text-left uppercase text-zinc-900 dark:text-zinc-100"
@@ -89,10 +89,10 @@ function Projects() {
                 <motion.button
                   type="button"
                   onClick={() => setSelectedProject(project)}
-                  initial={{ opacity: 0, y: 12 }}
-                  whileInView={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, x: -25 }}
+                  whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.35 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="group w-full text-left focus:outline-none"
                 >
                   <article className="md:hidden py-5 space-y-3">
