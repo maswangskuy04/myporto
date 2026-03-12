@@ -3,14 +3,14 @@ import { motion } from "framer-motion"
 import { Icon } from "@iconify/react"
 
 function AboutMe() {
-  const techStack = [
+  const primaryStack = [
     "Laravel",
     "PHP",
+    "Node.js",
+    "React",
     "MySQL",
-    "REST API",
-    "MVC Architecture",
-    "Git",
-    "Postman",
+    "Docker",
+    "Redis"
   ]
 
   return (
@@ -79,16 +79,13 @@ function AboutMe() {
             </div>
 
             <div className="space-y-3">
-              <p className="text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
-                Tech Stack
+              <p className="text-xs uppercase tracking-widest text-zinc-600 dark:text-zinc-400">
+                Technologies I Use
               </p>
 
-              <div className="flex flex-wrap gap-3">
-                {techStack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="text-xs px-3 py-1.5 rounded-md border border-zinc-300 dark:border-zinc-600 text-zinc-700 dark:text-zinc-300"
-                  >
+              <div className="flex flex-wrap gap-2 max-w-xl">
+                {primaryStack.map((tech) => (
+                  <span key={tech} className="text-xs px-3 py-1 rounded-full border border-zinc-300 dark:border-zinc-600 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors duration-200">
                     {tech}
                   </span>
                 ))}
